@@ -1,0 +1,46 @@
+<div>
+    <div class="d-flex justify-content-between">
+        <div class="d-flex align-item-center f-bold f-prime f-20 px-3">Books</div>
+        <div (click)="createBook()"><button mat-raised-button color="primary">
+                Create New Book</button></div>
+    </div>
+    <div class="content">
+        <div class="px-3 col-6">
+            <mat-form-field floatLabel="never">
+                <div class="d-flex" matPrefix>
+                    <mat-icon>search</mat-icon>
+                </div>
+                <input matInput type="text" class="w-100" autocomplete="off" name="label" placeholder="Search" [ngModel]="searchText" (ngModelChange)="search($event)">
+            </mat-form-field>
+        </div>
+
+
+        <!-- <span matPrefix><mat-icon>search</mat-icon></span> -->
+        <!--</mat-form-field> -->
+
+        <div class="f-14 px-3 f-prime f-bold">All Books</div>
+        <div class="col-12 d-flex flex-wrap">
+            <ng-container *ngFor="let book of books">
+                <div class="col-6 p-3">
+                    <mat-card class="book-card">
+                        <mat-card-content>
+                            <div class="f-14 f-bold">{{book?.volumeInfo?.title}}</div>
+                            <div class="d-flex flex-column
+                                justify-content-between">
+                                <div>
+                                    {{"Author : "+ book?.volumeInfo?.authors}}
+                                </div>
+                                <div>
+                                    {{"Publisher : "+book?.volumeInfo?.authors}}
+                                </div>
+                                <div>
+                                    {{"Published Date : "+book?.volumeInfo?.publishedDate}}
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

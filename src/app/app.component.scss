@@ -1,0 +1,36 @@
+.sidenav-container {
+    height: auto;
+    min-height: 100vh;
+}
+
+.sidenav {
+    padding: 15px;
+    box-shadow: 0 12px 15px 0 rgba(69, 65, 78, 0.1), inset 3px 0 10px 0 rgba(69, 65, 78, 0.1);
+    background-color: #ffffff;
+    position: absolute !important;
+}
+
+.menu-open {
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-close {
+    width: 56px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.content-full {
+    margin-left: 200px !important;
+    transition: 0.3s ease-in-out;
+}
+
+.content-nil {
+    margin-left: 56px !important;
+    transition: 0.3s ease-in-out;
+}
+
+.mat-drawer-content {
+    overflow: hidden;
+}

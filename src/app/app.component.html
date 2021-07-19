@@ -1,0 +1,64 @@
+<!-- Toolbar -->
+<!-- 
+<mat-toolbar>
+    
+    <div class="px-2 f-blue"> Kaplan -->
+<!-- <img src="https://kaplan.com/wp-content/themes/kaplan/images/kaplan-blue-logo.png"> -->
+<!-- </div>
+
+</mat-toolbar> -->
+
+<div class="content" role="main">
+    <mat-sidenav-container class="sidenav-container">
+
+        <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ |
+      async) === false" [class.menu-open]="isOpened && !(isHandset$ | async)" [class.menu-close]="!isOpened
+      && !(isHandset$ | async)">
+
+            <div class="pl-3 d-flex pb-3" (click)="toggleNav(drawer)">
+                <div>
+                    <mat-icon class="mat-icon-opacity material-icons-outlined">subject</mat-icon>
+                </div>
+                <div class="f-grey px-2 pt-1 f-14" *ngIf="opened">MENU</div>
+            </div>
+            <a routerLink="books" class="cursor-pointer f-grey" routerLinkActive="list-item-active" [routerLinkActiveOptions]="{exact:true}">
+                <div class="pl-3 d-flex pb-3">
+                    <div>
+                        <mat-icon class="mat-icon-opacity material-icons-outlined">chrome_reader_mode</mat-icon>
+                    </div>
+                    <div class="px-2 pt-1">Books</div>
+                </div>
+            </a>
+
+            <a routerLink="about-us" class="cursor-pointer f-grey" routerLinkActive="list-item-active">
+                <div class="pl-3 d-flex">
+                    <div>
+                        <mat-icon class="mat-icon-opacity material-icons-outlined">library_books</mat-icon>
+                    </div>
+                    <div class="px-2 pt-1"> About Us</div>
+                </div>
+            </a>
+        </mat-sidenav>
+
+        <mat-sidenav-content class="sidenav-content" [class.content-full]="isOpened
+      && !(isHandset$ | async)" [class.content-nil]="(!isOpened && !(isHandset$
+      | async))">
+            <mat-toolbar>
+
+                <div class="px-3 f-blue">
+                    <img src="https://kaplan.com/wp-content/themes/kaplan/images/kaplan-blue-logo.png">
+                </div>
+
+            </mat-toolbar>
+            <div class="p-3">
+                <router-outlet></router-outlet>
+            </div>
+
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+
+
+
+</div>

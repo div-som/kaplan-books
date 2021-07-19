@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: #264554 !important;
+}
+
+.f-prime {
+    color: #264554 !important;
+}
+
+.f-red {
+    color: red;
+}
+
+.f-blue {
+    color: #0d6efd;
+}
+
+.f-bold {
+    font-weight: bold;
+}
+
+.f-grey {
+    color: #264554;
+    opacity: 0.5;
+}
+
+.f-20 {
+    font-size: 20px;
+}
+
+.f-12 {
+    font-size: 12px;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.mat-icon-opacity {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+    padding: 0 5px !important;
+}
+
+.mat-drawer-inner-container {
+    overflow: hidden!important;
+}
+
+.dactive {
+    transition: all 0.2s ease-in-out;
+    color: #264554 !important;
+    font-weight: 500;
+    width: auto !important;
+}
+
+.list-item-active {
+    @extend .dactive;
+    g {
+        fill: #264554 !important;
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+}

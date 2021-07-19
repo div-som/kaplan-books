@@ -1,0 +1,14 @@
+.content {
+    padding: 30px 0;
+}
+
+.book-card {
+    border-left: 3px solid orange;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: translate(0px, -7px) scale(1);
+    transition: all 0.3s ease-in-out;
+}
