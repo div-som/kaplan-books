@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackbarService } from '../mat-snackbar.service';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   imports: [
     CommonModule
   ],
+  providers: [MatSnackbarService],
   exports: [
     MatToolbarModule,
     MatButtonModule,

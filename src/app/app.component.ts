@@ -20,10 +20,9 @@ export class AppComponent {
   opened: boolean = true;
 
   toggleNav(nav: any) {
-    console.log("were you callld")
     this.isOpened = !this.isOpened;
   }
 
-  constructor( private breakpointObserver: BreakpointObserver){}
+  constructor( private breakpointObserver: BreakpointObserver){
 
 }
